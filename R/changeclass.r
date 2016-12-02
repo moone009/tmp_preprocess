@@ -2,6 +2,7 @@
 #' 
 #' @param df a dataframe
 #' @return Processed dataframe that uses heurisitics to set columns to their apprpriate classification
+#' @export
 #' @examples
 #' changeclass(mtcars)
 

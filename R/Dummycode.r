@@ -2,10 +2,11 @@
 #' 
 #' @param df A dataframe
 #' @param DummyColumns a collection or single value that will be converted to dummy columns. This should be a character value. 
-#' @param Dropcols True or False parameter indicating whether to keep or drop the columns that were dummy coded. 
+#' @param dropcols True or False parameter indicating whether to keep or drop the columns that were dummy coded. 
 #' @return Processed dataframe with new dummy columns
+#' @export
 #' @examples
-#' dummyCode(mtcars, c('vs','gear','carb'),F)
+#' dummyCode(mtcars, c('vs','gear','carb'),FALSE)
 
 dummyCode <- function(df, DummyColumns, dropcols) {
     

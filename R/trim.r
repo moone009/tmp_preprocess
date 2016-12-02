@@ -4,6 +4,7 @@
 #' 
 #' @param x is the value to be trimmed
 #' @return a value without any extra whitespace
+#' @export
 #' @examples
 #' trim('This value      has    an unnecessary amount    of whitespace    ')
 #' 
@@ -15,9 +16,12 @@
 #' ## View our corrected dataframe
 #' head(iris)
 #' rm(iris)
+#'@import stringr
 
 trim <- function(x) {
-    require(stringr)
+    #require(stringr)
+    requireNamespace("stringr", quietly = TRUE)
+    
     x <- gsub("  ", " ", x)
     x <- gsub("  ", " ", x)
     x <- gsub("  ", " ", x)

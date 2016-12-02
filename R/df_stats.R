@@ -1,9 +1,13 @@
+#'@import reshape2
+#'@import dplyr
+#'@export
+
 df_stats <-function(df,changeclass=F){
+  requireNamespace("reshape2", quietly = TRUE)
+  requireNamespace("dplyr", quietly = TRUE)
+  requireNamespace("data.table", quietly = TRUE)
   
   source("./R/changeclass.r")
-  require(data.table)
-  require(reshape2)
-  require(dplyr)
   if(changeclass == T){
     df <- changeclass(df)
   }
