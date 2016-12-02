@@ -7,7 +7,7 @@ df_stats <-function(df,changeclass=F){
   requireNamespace("dplyr", quietly = TRUE)
   requireNamespace("data.table", quietly = TRUE)
   
-  source("./R/changeclass.r")
+  #source("./R/changeclass.r")
   if(changeclass == T){
     df <- changeclass(df)
   }
