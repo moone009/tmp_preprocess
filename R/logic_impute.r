@@ -48,5 +48,5 @@ impute <-function(df,col,mean,median,linear){
   
 }
 
-iris$Petal.Length[c(1,5,7,3)] <- NA
-impute(iris,3,F,F,T)
+#iris$Petal.Length[c(1,5,7,3)] <- NA
+#impute(iris,3,F,F,T)
