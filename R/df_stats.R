@@ -3,9 +3,9 @@
 #'@export
 
 df_stats <-function(df,changeclass=F){
-  requireNamespace("reshape2", quietly = TRUE)
-  requireNamespace("dplyr", quietly = TRUE)
-  requireNamespace("data.table", quietly = TRUE)
+  #requireNamespace("reshape2", quietly = TRUE)
+  #requireNamespace("dplyr", quietly = TRUE)
+  #requireNamespace("data.table", quietly = TRUE)
   
   #source("./R/changeclass.r")
   if(changeclass == T){
