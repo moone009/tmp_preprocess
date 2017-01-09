@@ -1,4 +1,4 @@
-#'@import reshape2
+#'@importFrom reshape2 melt
 #'@import dplyr
 #'@export
 
