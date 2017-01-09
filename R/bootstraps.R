@@ -10,7 +10,7 @@
 #' bootstraps(iris,.05,10)
 
 bootstraps <- function(df,sample.percent,samples){
-  requireNamespace("data.table", quietly = TRUE)
+  #requireNamespace("data.table", quietly = TRUE)
   dataframes <- vector(mode = "list", length = samples)
   df <- data.table(df)
   for(x in 1:length(dataframes)){
