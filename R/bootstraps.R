@@ -4,7 +4,7 @@
 #' @param sample.percent percent of the dataframe to sample
 #' @param samples number of bootstraps to return
 #' @return Vector containing N bootstraps
-#' @import data.table data.table
+#' @importFrom data.table data.table
 #' @export
 #' @examples
 #' bootstraps(iris,.05,10)
