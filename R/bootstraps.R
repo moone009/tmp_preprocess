@@ -11,9 +11,7 @@
 
 bootstraps <- function(df,sample.percent,samples){
   requireNamespace("data.table", quietly = TRUE)
-  
   dataframes <- vector(mode = "list", length = samples)
-  requireNamespace("data.table", quietly = TRUE)
   df <- data.table(df)
   for(x in 1:length(dataframes)){
     dataframes[[x]] <- df[sample(.N,  as.integer(nrow(df)* sample.percent))]
