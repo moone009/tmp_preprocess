@@ -4,7 +4,7 @@
 #' @param col is numeric index value of date column to be engineered
 #' @param holiday True or False if ouput should return date values
 #' @return dataframe with date values engineered
-#' @import lubridate month year day quarter week
+#' @importFrom lubridate month year day quarter week
 #' @export
 
 date_engineer <- function(df,col,holiday){
