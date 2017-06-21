@@ -9,7 +9,7 @@
 #' @export
 #' 
 
-LoopDisparteFiles <- function (FileDir,Seperator,IsHeader,quote) {
+LoopDisparteFiles <- function (FileDir,Seperator,IsHeader,quote=F) {
   
   # find the files that you want
   list.of.files <- list.files(FileDir)
@@ -23,13 +23,15 @@ LoopDisparteFiles <- function (FileDir,Seperator,IsHeader,quote) {
     if(quote == T){
       print(FileToRead)
       
-      assign(gsub('.csv','',list.of.files[i]),  read.csv(list.of.files[i],sep=Seperator,quote = "",header = IsHeader), envir = .GlobalEnv)
+      assign(gsub('.csv','',list.of.files[i]),  read.csv(FileToRead,sep=Seperator,quote = "",header = IsHeader), envir = .GlobalEnv)
     }
     if(quote == F){
       print(FileToRead)
       
-      assign(gsub('.csv','',list.of.files[i]),  read.csv(list.of.files[i],sep=Seperator,header = IsHeader), envir = .GlobalEnv)
+      assign(gsub('.csv','',list.of.files[i]),  read.csv(FileToRead,sep=Seperator,header = IsHeader), envir = .GlobalEnv)
     }
   }
   
 }
+
+LoopDisparteFiles('Y:/R_Packages/Preprocess/data/',",",T,T)
